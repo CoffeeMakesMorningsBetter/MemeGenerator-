@@ -6,12 +6,16 @@ meme.addEventListener('click', function(){
 	var url = document.getElementById("url").value 
 	var topline = document.getElementById("topline").value
 	console.log(topline)
+	var divImg = document.createElement('div')
+	divImg.setAttribute('classs','image')
 	var meme = document.createElement('img')
-	var toplinetext = document.createElement('p')
-	console.log(toplinetext)
+	var toplinetext = document.createElement('div')
+	// console.log(toplinetext)
 	toplinetext.textContent = topline 
+	toplinetext.setAttribute('class', 'top-left')
 	meme.setAttribute('src', url)
-	container.appendChild(meme)
-	container.appendChild(toplinetext)
+	divImg.appendChild(meme)
+	divImg.appendChild(toplinetext)
+	container.appendChild(divImg)
 })
 
