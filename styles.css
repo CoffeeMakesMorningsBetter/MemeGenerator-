@@ -1,14 +1,32 @@
 body {
-	background-color: pink;
+	background-color: #008800;
+}
+
+form {
+	margin-bottom: 10px;
+	border: black solid 10px;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
 }
 
 .image { 
    position: relative; 
    text-align: center;
-   color: white;
+   color: white
+ }
 
-.top-left {
+.top-center {
     position: absolute;
-    top: 8px;
-    left: 16px;
+    top: 5%;
+    left: 50%;
+}
+
+.bottom-center {
+	position: absolute;
+	top: 95%;
+	left: 50%;
 }
