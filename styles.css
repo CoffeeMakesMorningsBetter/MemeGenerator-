@@ -16,17 +16,20 @@ form {
 .image { 
    position: relative; 
    text-align: center;
-   color: white
+   color: white;
+   border: black solid 2px;
  }
 
 .top-center {
     position: absolute;
     top: 5%;
     left: 50%;
+    border: black solid 2px;
 }
 
 .bottom-center {
 	position: absolute;
 	top: 95%;
 	left: 50%;
+	border: black solid 2px;
 }
