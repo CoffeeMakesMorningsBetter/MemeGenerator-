@@ -28,6 +28,7 @@ meme.addEventListener('click', function(){
 	container.appendChild(divImg)
 	//clears fileds in forms 
 	form.reset()
+	event.preventDefault()
 	container.addEventListener('click', function(){
 		if(event.target.className === 'image'){
 			event.target.remove()
