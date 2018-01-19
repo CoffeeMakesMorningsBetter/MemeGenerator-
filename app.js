@@ -1,6 +1,7 @@
 var meme = document.querySelector('#meme')
 var container = document.querySelector('.container')
 var form = document.querySelector('#form')
+var message = "click on border to remove"
 
 meme.addEventListener('click', function(){
 	//TAKE URL CREATE IMAGE AND APPEND TO CONTAINER
@@ -8,6 +9,9 @@ meme.addEventListener('click', function(){
 	var topline = document.getElementById("topline").value
 	var bottomline = document.getElementById("bottomline").value
 	var divImg = document.createElement('div')
+	var span = document.createElement('span')
+	span.setAttribute('class', 'close')
+	span.textContent = message
 	divImg.setAttribute('class','image')
 	var meme = document.createElement('img')
 	var toplinetext = document.createElement('div')
@@ -17,6 +21,7 @@ meme.addEventListener('click', function(){
 	bottomlinetext.textContent = bottomline
 	bottomlinetext.setAttribute('class', 'bottom-center')
 	meme.setAttribute('src', url)
+	divImg.appendChild(span)
 	divImg.appendChild(meme)
 	divImg.appendChild(toplinetext)
 	divImg.appendChild(bottomlinetext)
@@ -24,7 +29,10 @@ meme.addEventListener('click', function(){
 	//clears fileds in forms 
 	form.reset()
 	container.addEventListener('click', function(){
-		event.target.remove()
+		if(event.target.className === 'image'){
+			event.target.remove()
+		}
+
 	})
 })
 
