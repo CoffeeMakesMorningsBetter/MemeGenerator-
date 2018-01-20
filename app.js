@@ -8,7 +8,7 @@ var bottomline = document.getElementById("bottomline")
 
 
 document.addEventListener("DOMContentLoaded", function(){
-	event.preventDefault() // PREVENT FORM FROM REFRESHING ON SUBMIT 
+	
 	
 	meme.addEventListener('click', function(){
 	//CRETAE DIV TO HOLD ALL CONTENT SET ATTRIBUTES 
@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	//APEND CRETED DIV with INFO to CONTAINER DIV
 	container.appendChild(divImg)
 	
+	event.preventDefault() // PREVENT FORM FROM REFRESHING ON SUBMIT 
 	//CLERA FORM FIELDS 
 	form.reset()
 
